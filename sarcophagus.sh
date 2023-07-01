@@ -14,7 +14,6 @@ echo "export Domain=$Domain" >> $HOME/.bash_profile
 sleep 1
 RPCSEC=""
 while [[ $RPCSEC != "1" && $RPCSEC != "2" && $RPCSEC != "3" && $RPCSEC != "4" ]]; do 
-echo -e "\033[031mHatalı seçim yaptınız\033[0m"
 echo ""
 sleep 2
 echo -e "\e[0;32mRPC URL seçiminizi yapın\033[0m"

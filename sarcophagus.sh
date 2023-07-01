@@ -23,7 +23,7 @@ echo -e "\033[0;35m"
 read -p "Seçiminiz (1/2/3/4): " RPCSEC
 echo ""
 echo -e '\e[0m'
-while [[ $RPCSEC != "1" && $RPCSEC != "2" && $RPCSEC !="3" && $RPCSEC !="4"]];
+while [[ $RPCSEC != "1" && $RPCSEC != "2" && $RPCSEC != "3" && $RPCSEC != "4"]];
  do 
 echo "\033[031mHatalı seçim yaptınız\033[0m"
 echo ""

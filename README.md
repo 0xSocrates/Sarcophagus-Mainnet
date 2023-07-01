@@ -53,8 +53,23 @@ COMPOSE_PROFILES=register docker compose run register
 > 7. Son kontrol ve onay
 > ![image](https://github.com/0xSocrates/Sarcophagus-Mainnet/assets/108215275/ea733f4f-c5e5-40c8-affa-533dee486201)
 
-## Bitti
+## Tamamlandı
 ![image](https://github.com/0xSocrates/Sarcophagus-Mainnet/assets/108215275/58fcc216-5b9b-4a01-ad1f-60669cf6f629)
 
+## Başlatın
+```
+COMPOSE_PROFILES=service docker compose up -d
+```
+
+## Log kontrolü
+```
+docker logs --follow quickstart-archaeologist-acme-companion-1
+```
+```
+docker logs --follow quickstart-archaeologist-archaeologist-1 
+```
+```
+docker logs --follow nginx-proxy 
+```
 
 

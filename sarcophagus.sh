@@ -2,7 +2,7 @@
 clear
 curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/matrix.sh | bash
 curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/socrates.sh | bash
-echo -e "\e[0;34mSarcophagus Kurulumu Başlatılıyor.\e[0m" && sleep 2
+echo -e "\e[0;34mSarcophagus Kurulumu Başlatılıyor.\e[0m" && sleep 3
 echo -e '\e[0;35m' && read -p "Cüzdanınızın Private Key girin: " PrivKey 
 echo -e "\033[033mPrivate Key\033[034m $PrivKey \033[033molarak kaydedildi"
 echo -e '\e[0m'
@@ -34,6 +34,7 @@ echo -e '\e[0;35m' && read -p "Özel Rpc Url Adresini Girin: " RPC
 echo -e "\033[033mRpc Adresi\033[034m $RPC \033[033molarak kaydedildi"
 echo -e '\e[0m' && echo "export RPC=$RPC" >> $HOME/.bash_profile
 fi
+source $HOME/.bash_profile
 sleep 1
 echo -e "\e[0;34mSunucu Hazırlanıyor.\e[0m"
 exec > /dev/null 2>&1 && docker stop quickstart-archaeologist-archaeologist-1 quickstart-archaeologist-acme-companion-1 nginx-proxy && docker rm quickstart-archaeologist-archaeologist-1 quickstart-archaeologist-acme-companion-1 nginx-proxy
@@ -48,7 +49,7 @@ Mnemonic=$(COMPOSE_PROFILES=seed docker compose run seed-gen | grep -oE "[a-zA-Z
 echo "export Mnemonic=$Mnemonic" >> $HOME/.bash_profile
 sed -i "s/^ETH_PRIVATE_KEY=.*/ETH_PRIVATE_KEY=${PrivKey}/" .env
 sed -i "s/^DOMAIN=.*/DOMAIN=${Domain}/" .env
-sed -i "s/^PROVIDER_URL=.*/PROVIDER_URL=${RPC}/" .env
+sed -i "s|^PROVIDER_URL=.*|PROVIDER_URL=${RPC}|" .env
 sed -i "s/^ENCRYPTION_MNEMONIC=.*/ENCRYPTION_MNEMONIC=${Mnemonic}/" .env
 cp .env /$HOME/env.backup
 exec > /dev/tty 2>&1

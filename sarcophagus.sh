@@ -3,9 +3,9 @@ clear
 curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/matrix.sh | bash
 curl -sSL https://raw.githubusercontent.com/0xSocrates/Scripts/main/socrates.sh | bash
 echo -e '\e[0;35m' && read -p "Cüzdanınızın Private Key girin: " PrivKey 
-echo -e "\033[035mPrivate Key\033[034m $Privkey \033[035molarak kaydedildi"
+echo -e "\033[035mPrivate Key\033[034m $PrivKey \033[035molarak kaydedildi"
 echo -e '\e[0m'
-echo "export PrivKey=$Privkey" >> $HOME/.bash_profile
+echo "export PrivKey=$PrivKey" >> $HOME/.bash_profile
 sleep 1
 echo -e '\e[0;35m' && read -p "Domain isminizi girin: " Domain 
 echo -e "\033[035mDomain Name\033[034m $Domain \033[035molarak kaydedildi"

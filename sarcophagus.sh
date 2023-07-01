@@ -52,9 +52,11 @@ sed -i "s/^DOMAIN=.*/DOMAIN=${Domain}/" .env
 sed -i "s|^PROVIDER_URL=.*|PROVIDER_URL=${RPC}|" .env
 sed -i "s/^ENCRYPTION_MNEMONIC=.*/ENCRYPTION_MNEMONIC=${Mnemonic}/" .env
 cp .env /$HOME/env.backup
+COMPOSE_PROFILES=service docker compose pull
 exec > /dev/tty 2>&1
 echo -e "\e[0;34mKurulum Tamamlandı.\e[0m"
 sleep 1
 echo -e "\e[0;32mArkeoloğunuzu kaydetmek için:\033[0;35m cd quickstart-archaeologist && COMPOSE_PROFILES=register docker compose run register\e[0;32m komutunu çalıştırın"
 echo -e "\e[0;32mYönergeleri takip edin ardından başlatmak için:\033[0;35m COMPOSE_PROFILES=service docker compose up -d\e[0;32m komutunu çalıştırın"
 echo -e '\e[0m'
+source $HOME/.bash_profile

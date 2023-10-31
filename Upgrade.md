@@ -1,5 +1,8 @@
 # Archaeologist Node Network Güncelleme Rehberi
 
+![image](https://github.com/0xSocrates/Sarcophagus-Mainnet/assets/108215275/c22be8a8-4110-458e-84bc-38a11a9f092c)
+
+
 Arkadaşlar yeni gelen güncelleme ile birlikte aynı  sunucuda aynı arkeolog nodunu birden fazla ağda çalıştırabileceksiniz. Halihazırda ***Eth Mainnnette*** çalışıyorduk artık buna ek olarak ***Polygon Mainnet, Polygon Mumbai, Eth Sepolia*** ağlarında da çalıştırılabilecek. 
 
 Eth Mainnete ek olarak hangi ağda veya ağlarda çalıştırmak istediğinize karar verdikten sonra yapmanız gerekenler;

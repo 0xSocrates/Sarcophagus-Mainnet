@@ -77,7 +77,7 @@ Yeni ağ/ağlardaki arkeologların kaydını yapın.
 - eth sepolia için `COMPOSE_PROFILES=register NETWORK=sepolia docker compose run register`
 - Komutunu girin, sorulan sorulara yanıtlarınızı girin. daha önceki arkeolog kaydı gibi. onayladıktan ve kaydettikten varsa diğer ağlar için de aynı şekilde register işlemini yapın ardından başlatın.
 ```
-COMPOSE_PROFILES=service docker compose run up -d
+COMPOSE_PROFILES=service docker compose up -d
 ```
 
 - Eğer bir sorun olmazsa çalıştırdıktan bir kaç dakika sonra https://app.dev.sarcophagus.io/archaeologists arkeolog listesinde görüneceksiniz. (siteye çalıştırdığınız ağ ile bağlanmayı unutmayın)
